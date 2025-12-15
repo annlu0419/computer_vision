@@ -385,7 +385,7 @@ class ExamApp {
             if (confirm('確定要交卷嗎？')) this.submitExam();
         };
         document.getElementById('reviewBtn').onclick = () => {
-            window.open('review.html', '_blank');
+            window.open('review-dynamic.html', '_blank');
         };
         document.getElementById('closeBtn').onclick = () => {
             document.getElementById('resultsModal').classList.remove('active');
