@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答案詳解 - 115學測英文模擬試題</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+
+        .review-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .review-header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-review {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-review h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-review {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
+        .question-review.correct {
+            border-left-color: #27ae60;
+            background: #f0f9f4;
+        }
+
+        .question-review.incorrect {
+            border-left-color: #e74c3c;
+            background: #fef5f5;
+        }
+
+        .qnum {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .qtext {
+            margin: 0.75rem 0;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        .user-answer-box {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #e3f2fd;
+            border-radius: 4px;
+            border-left: 3px solid #2196f3;
+        }
+
+        .user-answer-box.correct {
+            background: #d5f4e6;
+            border-left-color: #27ae60;
+        }
+
+        .user-answer-box.incorrect {
+            background: #ffebee;
+            border-left-color: #e74c3c;
+        }
+
+        .user-answer-box .label {
+            font-weight: bold;
+            color: #2196f3;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-answer-box.correct .label {
+            color: #27ae60;
+        }
+
+        .user-answer-box.incorrect .label {
+            color: #e74c3c;
+        }
+
+        .answer-box {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #d5f4e6;
+            border-radius: 4px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .answer-box .label {
+            font-weight: bold;
+            color: #27ae60;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .options-explanation {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            border-radius: 4px;
+        }
+
+        .options-explanation .label {
+            font-weight: bold;
+            color: #856404;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .option-item {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .option-item.correct-answer {
+            background: #d5f4e6;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .option-item.user-selected {
+            background: #e3f2fd;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .option-item.user-selected.incorrect {
+            background: #ffebee;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .back-link:hover {
+            background: #2980b9;
+        }
+
+        .score-summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .score-summary h2 {
+            margin: 0;
+            font-size: 2.5rem;
+            border: none;
+        }
+
+        .score-summary p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="review-header">
+        <h1>115學年度學測英文模擬試題 - 答案詳解</h1>
+        <p>完整解析與學習重點</p>
+        <a href="index.html" class="back-link">← 返回測驗</a>
+    </div>
+
+    <div class="review-container">
+        <!-- Score Summary -->
+        <div id="scoreSummary" class="score-summary"></div>
+
+        <!-- Vocabulary Section -->
+        <div class="section-review">
+            <h2>一、詞彙題 (10分)</h2>
+            <div id="vocabReview"></div>
+        </div>
+
+        <!-- Cloze Test Section -->
+        <div class="section-review">
+            <h2>二、綜合測驗 (10分)</h2>
+            <div id="clozeReview"></div>
+        </div>
+
+        <!-- Fill-in Section -->
+        <div class="section-review">
+            <h2>三、文意選填 (10分)</h2>
+            <p><strong>選項：</strong>(A) concern (B) collaboration (C) rights (D) access (E) supplement (F) transformation
+                (G) facilitate (H) creating (I) skepticism (J) previously</p>
+            <div id="fillReview"></div>
+        </div>
+
+        <!-- More sections will be added dynamically -->
+    </div>
+
+    <script src="exam-data-full.js"></script>
+    <script src="review-dynamic.js"></script>
+</body>
+
+</html>

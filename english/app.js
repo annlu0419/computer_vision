@@ -3,6 +3,7 @@ class ExamApp {
     constructor() {
         this.currentQ = 1;
         this.answers = {};
+        this.strikethroughs = {}; // 儲存劃掉狀態
         this.timeLeft = EXAM_DATA.time;
         this.timer = null;
         this.init();
@@ -21,6 +22,7 @@ class ExamApp {
         if (saved) {
             const state = JSON.parse(saved);
             this.answers = state.answers || {};
+            this.strikethroughs = state.strikethroughs || {}; // 載入劃掉狀態
             this.timeLeft = state.timeLeft || EXAM_DATA.time;
             this.currentQ = state.currentQ || 1;
         }
@@ -29,6 +31,7 @@ class ExamApp {
     saveState() {
         localStorage.setItem('examState', JSON.stringify({
             answers: this.answers,
+            strikethroughs: this.strikethroughs, // 儲存劃掉狀態
             timeLeft: this.timeLeft,
             currentQ: this.currentQ
         }));
@@ -54,6 +57,28 @@ class ExamApp {
         document.getElementById('progress').textContent = `進度: ${answered}/50`;
     }
 
+    // 取得第21題到第N-1題已選過的答案文字（用於第22-30題自動劃掉判斷）
+    getSelectedAnswersFromQ21toN(currentQ) {
+        const selectedAnswers = new Set();
+        const sections = EXAM_DATA.sections;
+
+        // 只處理第22-30題的情況
+        if (currentQ < 22 || currentQ > 30) {
+            return selectedAnswers;
+        }
+
+        // 檢查第21題到第(currentQ-1)題
+        for (let i = 21; i < currentQ; i++) {
+            if (this.answers[i] !== undefined) {
+                const q = sections.fill.questions[i - 21];
+                const selectedOptionText = sections.fill.options[this.answers[i]];
+                selectedAnswers.add(selectedOptionText);
+            }
+        }
+
+        return selectedAnswers;
+    }
+
     renderQuestion() {
         const q = this.getQuestion(this.currentQ);
         const area = document.getElementById('questionArea');
@@ -69,24 +94,54 @@ class ExamApp {
         }
 
         if (q.type === 'choice') {
+            // 判斷是否為第22-30題，需要自動劃掉已選過的答案（逐題向前比對）
+            const isQ22to30 = this.currentQ >= 22 && this.currentQ <= 30;
+            const selectedAnswers = isQ22to30 ? this.getSelectedAnswersFromQ21toN(this.currentQ) : new Set();
+
             content.innerHTML = `
                 ${passageHTML}
                 <div class="question-text">
                     <strong>${this.currentQ}. </strong>${q.question}
                 </div>
                 <div class="options">
-                    ${q.options.map((opt, i) => `
+                    ${q.options.map((opt, i) => {
+                // 檢查是否需要預設劃掉（第22-30題且答案在第21到N-1題中已被選過）
+                const shouldAutoStrike = isQ22to30 && selectedAnswers.has(opt);
+                const strikeKey = `${this.currentQ}_${i}`;
+                // 如果沒有手動設定過，則使用自動判斷；否則使用手動設定
+                const isStrikethrough = this.strikethroughs[strikeKey] !== undefined
+                    ? this.strikethroughs[strikeKey]
+                    : shouldAutoStrike;
+
+                return `
                         <div class="option">
                             <input type="radio" name="q${this.currentQ}" id="opt${i}" value="${i}" 
                                 ${this.answers[this.currentQ] == i ? 'checked' : ''}>
-                            <label for="opt${i}">(${String.fromCharCode(65 + i)}) ${opt}</label>
+                            <label for="opt${i}" class="${isStrikethrough ? 'strikethrough' : ''}" data-option-index="${i}">
+                                (${String.fromCharCode(65 + i)}) ${opt}
+                            </label>
+                            <button class="strike-btn ${isStrikethrough ? 'active' : ''}" data-option-index="${i}" title="劃掉/取消劃掉">
+                                ✕
+                            </button>
                         </div>
-                    `).join('')}
+                    `}).join('')}
                 </div>
             `;
+
+            // 綁定選項選擇事件
             content.querySelectorAll('input[type="radio"]').forEach(input => {
                 input.onchange = () => this.saveAnswer(this.currentQ, parseInt(input.value));
             });
+
+            // 綁定劃掉按鈕事件
+            content.querySelectorAll('.strike-btn').forEach(btn => {
+                btn.onclick = (e) => {
+                    e.preventDefault();
+                    const optionIndex = btn.getAttribute('data-option-index');
+                    this.toggleStrikethrough(this.currentQ, optionIndex);
+                };
+            });
+
         } else if (q.type === 'multi') {
             content.innerHTML = `
                 ${passageHTML}
@@ -94,15 +149,25 @@ class ExamApp {
                     <strong>${this.currentQ}. </strong>${q.question}
                 </div>
                 <div class="options">
-                    ${q.options.map((opt, i) => `
+                    ${q.options.map((opt, i) => {
+                const strikeKey = `${this.currentQ}_${i}`;
+                const isStrikethrough = this.strikethroughs[strikeKey] || false;
+
+                return `
                         <div class="option">
                             <input type="checkbox" id="opt${i}" value="${i}" 
                                 ${this.answers[this.currentQ]?.includes(i) ? 'checked' : ''}>
-                            <label for="opt${i}">(${String.fromCharCode(65 + i)}) ${opt}</label>
+                            <label for="opt${i}" class="${isStrikethrough ? 'strikethrough' : ''}" data-option-index="${i}">
+                                (${String.fromCharCode(65 + i)}) ${opt}
+                            </label>
+                            <button class="strike-btn ${isStrikethrough ? 'active' : ''}" data-option-index="${i}" title="劃掉/取消劃掉">
+                                ✕
+                            </button>
                         </div>
-                    `).join('')}
+                    `}).join('')}
                 </div>
             `;
+
             content.querySelectorAll('input[type="checkbox"]').forEach(input => {
                 input.onchange = () => {
                     const checked = Array.from(content.querySelectorAll('input[type="checkbox"]:checked'))
@@ -110,6 +175,16 @@ class ExamApp {
                     this.saveAnswer(this.currentQ, checked);
                 };
             });
+
+            // 綁定劃掉按鈕事件
+            content.querySelectorAll('.strike-btn').forEach(btn => {
+                btn.onclick = (e) => {
+                    e.preventDefault();
+                    const optionIndex = btn.getAttribute('data-option-index');
+                    this.toggleStrikethrough(this.currentQ, optionIndex);
+                };
+            });
+
         } else if (q.type === 'fill') {
             content.innerHTML = `
                 ${passageHTML}
@@ -125,6 +200,26 @@ class ExamApp {
 
         document.getElementById('prevBtn').disabled = this.currentQ === 1;
         document.getElementById('nextBtn').disabled = this.currentQ === 50;
+    }
+
+    // 切換劃掉狀態
+    toggleStrikethrough(qNum, optionIndex) {
+        const strikeKey = `${qNum}_${optionIndex}`;
+        this.strikethroughs[strikeKey] = !this.strikethroughs[strikeKey];
+
+        // 更新UI
+        const label = document.querySelector(`label[data-option-index="${optionIndex}"]`);
+        const btn = document.querySelector(`.strike-btn[data-option-index="${optionIndex}"]`);
+
+        if (this.strikethroughs[strikeKey]) {
+            label.classList.add('strikethrough');
+            btn.classList.add('active');
+        } else {
+            label.classList.remove('strikethrough');
+            btn.classList.remove('active');
+        }
+
+        this.saveState();
     }
 
     getQuestion(num) {
