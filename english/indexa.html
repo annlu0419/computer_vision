@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>115學年度學測英文模擬試題</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exam-container">
+        <!-- Header -->
+        <header class="exam-header">
+            <div class="header-content">
+                <h1>115學年度學科能力測驗模擬試題 - 英文考科</h1>
+                <div class="exam-info">
+                    <span class="timer" id="timer">100:00</span>
+                    <span class="progress" id="progress">進度: 0/50</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="exam-main">
+            <!-- Navigation Panel -->
+            <aside class="nav-panel" id="navPanel">
+                <h3>題號導覽</h3>
+                <div class="nav-grid" id="navGrid"></div>
+                <button class="submit-btn" id="submitBtn">交卷</button>
+            </aside>
+
+            <!-- Question Area -->
+            <section class="question-area" id="questionArea">
+                <div class="section-title" id="sectionTitle"></div>
+                <div class="question-content" id="questionContent"></div>
+                <div class="question-controls">
+                    <button class="btn-prev" id="prevBtn">上一題</button>
+                    <button class="btn-next" id="nextBtn">下一題</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Results Modal -->
+        <div class="modal" id="resultsModal">
+            <div class="modal-content">
+                <h2>測驗結果</h2>
+                <div id="resultsContent"></div>
+                <button class="btn-review" id="reviewBtn">查看詳解</button>
+                <button class="btn-close" id="closeBtn">關閉</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="exam-data-full.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
