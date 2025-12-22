@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學測自然科模擬考系統</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="exam-header">
+            <h1>113學年度學測自然科模擬試卷</h1>
+            <div class="exam-info">
+                <span>總題數: <strong id="totalQuestions">68</strong></span>
+                <span>考試時間: <strong>110分鐘</strong></span>
+                <span id="timer" class="timer">00:00:00</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="progress-section">
+                    <h3>作答進度</h3>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <p id="progressText">已作答: 0/68</p>
+                </div>
+                
+                <div class="answer-card">
+                    <h3>答案卡</h3>
+                    <div id="answerGrid" class="answer-grid"></div>
+                </div>
+            </aside>
+
+            <main class="question-area">
+                <div class="question-nav">
+                    <button id="prevBtn" class="nav-btn">← 上一題</button>
+                    <span id="questionNumber" class="question-number">第 1 題</span>
+                    <button id="nextBtn" class="nav-btn">下一題 →</button>
+                </div>
+
+                <div id="questionContent" class="question-content">
+                    <!-- 題目內容將由JavaScript動態載入 -->
+                </div>
+
+                <div class="options-container" id="optionsContainer">
+                    <!-- 選項將由JavaScript動態載入 -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="exam-footer">
+            <button id="submitBtn" class="submit-btn">交卷</button>
+        </footer>
+    </div>
+
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <h2>確認交卷</h2>
+            <p id="submitWarning"></p>
+            <div class="modal-buttons">
+                <button id="confirmSubmit" class="btn-primary">確認交卷</button>
+                <button id="cancelSubmit" class="btn-secondary">繼續作答</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
