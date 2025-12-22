@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // 載入資料
 async function loadData() {
-    // 載入試題資料
-    const response = await fetch('exam-data.json');
-    examData = await response.json();
-
     // 載入考試結果
     const savedResults = localStorage.getItem('examResults');
     if (!savedResults) {
@@ -25,6 +21,17 @@ async function loadData() {
         return;
     }
     results = JSON.parse(savedResults);
+
+    // 使用儲存的隨機後題目順序
+    if (results.examData) {
+        examData = results.examData;
+        console.log('✅ 使用隨機後的題目順序顯示錯題檢討');
+    } else {
+        // 向下相容:如果沒有儲存題目順序,則載入原始資料
+        const response = await fetch('exam-data.json');
+        examData = await response.json();
+        console.log('⚠️ 使用原始題目順序(舊版資料)');
+    }
 }
 
 // 計算成績

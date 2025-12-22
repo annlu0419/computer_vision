@@ -12,12 +12,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     startTimer();
 });
 
+// Fisher-Yates 洗牌演算法
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 // 載入試題資料
 async function loadExamData() {
     try {
         const response = await fetch('exam-data.json');
-        examData = await response.json();
+        const data = await response.json();
+
+        // 隨機打亂題目順序
+        examData = {
+            ...data,
+            questions: shuffleArray(data.questions)
+        };
+
+        // 重新編號題目ID
+        examData.questions.forEach((q, index) => {
+            q.id = index + 1;
+        });
+
         studentAnswers = new Array(examData.questions.length).fill(null);
+
+        console.log('✅ 題目已隨機化!每次測驗都會有不同的題目順序');
     } catch (error) {
         console.error('載入試題失敗:', error);
         alert('試題載入失敗,請重新整理頁面');
@@ -48,17 +72,17 @@ function createAnswerGrid() {
 function displayQuestion(index) {
     currentQuestion = index;
     const question = examData.questions[index];
-    
+
     // 更新題號
     document.getElementById('questionNumber').textContent = `第 ${index + 1} 題`;
-    
+
     // 顯示題目內容
     const contentDiv = document.getElementById('questionContent');
     contentDiv.innerHTML = `
         <span class="subject-tag subject-${question.subject}">${getSubjectName(question.subject)}</span>
         <p>${question.question}</p>
     `;
-    
+
     // 顯示選項
     const optionsDiv = document.getElementById('optionsContainer');
     optionsDiv.innerHTML = '';
@@ -72,11 +96,11 @@ function displayQuestion(index) {
         optionDiv.onclick = () => selectAnswer(i);
         optionsDiv.appendChild(optionDiv);
     });
-    
+
     // 更新導航按鈕
     document.getElementById('prevBtn').disabled = index === 0;
     document.getElementById('nextBtn').disabled = index === examData.questions.length - 1;
-    
+
     // 更新答案卡
     updateAnswerGrid();
 }
@@ -108,7 +132,7 @@ function updateProgress() {
     const answered = studentAnswers.filter(a => a !== null).length;
     const total = examData.questions.length;
     const percentage = (answered / total) * 100;
-    
+
     document.getElementById('progressFill').style.width = `${percentage}%`;
     document.getElementById('progressText').textContent = `已作答: ${answered}/${total}`;
 }
@@ -140,7 +164,7 @@ function startTimer() {
         const hours = Math.floor(elapsed / 3600);
         const minutes = Math.floor((elapsed % 3600) / 60);
         const seconds = elapsed % 60;
-        document.getElementById('timer').textContent = 
+        document.getElementById('timer').textContent =
             `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }, 1000);
 }
@@ -165,13 +189,13 @@ function submitExam() {
     const unanswered = studentAnswers.filter(a => a === null).length;
     const modal = document.getElementById('submitModal');
     const warning = document.getElementById('submitWarning');
-    
+
     if (unanswered > 0) {
         warning.textContent = `您還有 ${unanswered} 題未作答,確定要交卷嗎?`;
     } else {
         warning.textContent = '確定要交卷嗎?';
     }
-    
+
     modal.classList.add('active');
 }
 
@@ -181,9 +205,10 @@ function confirmSubmit() {
     const results = {
         answers: studentAnswers,
         timeSpent: timeSpent,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        examData: examData  // 儲存隨機後的題目順序
     };
-    
+
     localStorage.setItem('examResults', JSON.stringify(results));
     window.location.href = 'result.html';
 }
@@ -211,7 +236,7 @@ function setupEventListeners() {
     document.getElementById('submitBtn').onclick = submitExam;
     document.getElementById('confirmSubmit').onclick = confirmSubmit;
     document.getElementById('cancelSubmit').onclick = cancelSubmit;
-    
+
     // 鍵盤快捷鍵
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') prevQuestion();
