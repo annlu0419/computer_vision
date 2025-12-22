@@ -1,0 +1,1688 @@
+{
+  "examInfo": {
+    "title": "113學年度學測自然科模擬試卷",
+    "totalQuestions": 68,
+    "timeLimit": 110,
+    "subjects": {
+      "physics": 17,
+      "chemistry": 17,
+      "biology": 17,
+      "earth": 17
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "運動學",
+      "question": "一質點沿直線運動,其位置與時間的關係為 x = 3t² + 2t (SI單位)。在 t = 2秒時,此質點的瞬時速度為何?",
+      "options": [
+        "10 m/s",
+        "14 m/s",
+        "16 m/s",
+        "18 m/s",
+        "20 m/s"
+      ],
+      "correctAnswer": 1,
+      "explanation": "速度為位置對時間的微分:v = dx/dt = 6t + 2。當t=2時,v = 6(2) + 2 = 14 m/s。",
+      "keyPoints": [
+        "微分概念",
+        "瞬時速度定義"
+      ],
+      "commonErrors": [
+        "誤用平均速度",
+        "計算錯誤"
+      ]
+    },
+    {
+      "id": 2,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "運動學",
+      "question": "自由落體運動中,物體在第3秒內(從2秒末到3秒末)下落的距離約為多少公尺?(g = 10 m/s²)",
+      "options": [
+        "15 m",
+        "20 m",
+        "25 m",
+        "30 m",
+        "35 m"
+      ],
+      "correctAnswer": 2,
+      "explanation": "第3秒內距離 = s(3) - s(2) = ½g(3²) - ½g(2²) = ½×10×(9-4) = 25 m。",
+      "keyPoints": [
+        "自由落體公式",
+        "時間區間概念"
+      ],
+      "commonErrors": [
+        "誤算總距離",
+        "公式套用錯誤"
+      ]
+    },
+    {
+      "id": 3,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "運動學",
+      "question": "一物體做等加速度直線運動,初速度為5 m/s,加速度為2 m/s²。經過多少時間後,物體的速度會達到15 m/s?",
+      "options": [
+        "3秒",
+        "4秒",
+        "5秒",
+        "6秒",
+        "7秒"
+      ],
+      "correctAnswer": 2,
+      "explanation": "使用v = v₀ + at,15 = 5 + 2t,解得t = 5秒。",
+      "keyPoints": [
+        "等加速度運動公式"
+      ],
+      "commonErrors": [
+        "公式選擇錯誤"
+      ]
+    },
+    {
+      "id": 4,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "牛頓運動定律",
+      "question": "質量2 kg的物體受到10 N的淨力作用,則其加速度為何?",
+      "options": [
+        "3 m/s²",
+        "4 m/s²",
+        "5 m/s²",
+        "6 m/s²",
+        "8 m/s²"
+      ],
+      "correctAnswer": 2,
+      "explanation": "由F = ma,a = F/m = 10/2 = 5 m/s²。",
+      "keyPoints": [
+        "牛頓第二運動定律"
+      ],
+      "commonErrors": [
+        "單位換算錯誤"
+      ]
+    },
+    {
+      "id": 5,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "牛頓運動定律",
+      "question": "在光滑水平面上,質量3 kg的物體以6 m/s的速度運動。若施加一水平力使其在2秒內停止,此力的大小為何?",
+      "options": [
+        "6 N",
+        "7 N",
+        "8 N",
+        "9 N",
+        "10 N"
+      ],
+      "correctAnswer": 3,
+      "explanation": "加速度a = (0-6)/2 = -3 m/s²,力F = ma = 3×3 = 9 N。",
+      "keyPoints": [
+        "加速度計算",
+        "牛頓第二定律"
+      ],
+      "commonErrors": [
+        "符號處理錯誤"
+      ]
+    },
+    {
+      "id": 6,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "能量與功",
+      "question": "質量2 kg的物體從靜止開始自由落下10 m,落地前瞬間的動能約為多少焦耳?(g = 10 m/s²)",
+      "options": [
+        "100 J",
+        "150 J",
+        "200 J",
+        "250 J",
+        "300 J"
+      ],
+      "correctAnswer": 2,
+      "explanation": "由能量守恆,動能 = 位能損失 = mgh = 2×10×10 = 200 J。",
+      "keyPoints": [
+        "能量守恆",
+        "重力位能"
+      ],
+      "commonErrors": [
+        "公式混淆"
+      ]
+    },
+    {
+      "id": 7,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "能量與功",
+      "question": "一彈簧的彈性係數為200 N/m,將其壓縮0.1 m,則儲存的彈性位能為何?",
+      "options": [
+        "0.5 J",
+        "1 J",
+        "1.5 J",
+        "2 J",
+        "2.5 J"
+      ],
+      "correctAnswer": 1,
+      "explanation": "彈性位能 = ½kx² = ½×200×(0.1)² = 1 J。",
+      "keyPoints": [
+        "彈性位能公式"
+      ],
+      "commonErrors": [
+        "平方計算錯誤"
+      ]
+    },
+    {
+      "id": 8,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "電磁學",
+      "question": "兩個點電荷相距r時的靜電力為F。若距離變為2r,則靜電力變為多少?",
+      "options": [
+        "F/4",
+        "F/2",
+        "F",
+        "2F",
+        "4F"
+      ],
+      "correctAnswer": 0,
+      "explanation": "由庫侖定律F ∝ 1/r²,距離變2倍,力變為原來的1/4。",
+      "keyPoints": [
+        "庫侖定律",
+        "平方反比關係"
+      ],
+      "commonErrors": [
+        "比例關係錯誤"
+      ]
+    },
+    {
+      "id": 9,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "電磁學",
+      "question": "一導線通過2 A的電流,在10秒內通過導線橫截面的電荷量為多少庫侖?",
+      "options": [
+        "10 C",
+        "15 C",
+        "20 C",
+        "25 C",
+        "30 C"
+      ],
+      "correctAnswer": 2,
+      "explanation": "電荷量Q = It = 2×10 = 20 C。",
+      "keyPoints": [
+        "電流定義"
+      ],
+      "commonErrors": [
+        "公式記憶錯誤"
+      ]
+    },
+    {
+      "id": 10,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "電磁學",
+      "question": "一電阻為10Ω的導體,通過2 A的電流時,其兩端的電壓為何?",
+      "options": [
+        "10 V",
+        "15 V",
+        "20 V",
+        "25 V",
+        "30 V"
+      ],
+      "correctAnswer": 2,
+      "explanation": "由歐姆定律V = IR = 2×10 = 20 V。",
+      "keyPoints": [
+        "歐姆定律"
+      ],
+      "commonErrors": [
+        "公式應用錯誤"
+      ]
+    },
+    {
+      "id": 11,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "波動與光學",
+      "question": "某聲波在空氣中的波長為0.5 m,頻率為680 Hz,則此聲波的速度為何?",
+      "options": [
+        "320 m/s",
+        "330 m/s",
+        "340 m/s",
+        "350 m/s",
+        "360 m/s"
+      ],
+      "correctAnswer": 2,
+      "explanation": "波速v = fλ = 680×0.5 = 340 m/s。",
+      "keyPoints": [
+        "波速公式"
+      ],
+      "commonErrors": [
+        "單位換算錯誤"
+      ]
+    },
+    {
+      "id": 12,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "波動與光學",
+      "question": "光從空氣進入水中時,下列何者會改變?",
+      "options": [
+        "頻率",
+        "波長",
+        "週期",
+        "能量",
+        "光子數"
+      ],
+      "correctAnswer": 1,
+      "explanation": "光進入不同介質時,頻率不變,但波長和速度會改變。",
+      "keyPoints": [
+        "光的折射性質"
+      ],
+      "commonErrors": [
+        "混淆頻率與波長"
+      ]
+    },
+    {
+      "id": 13,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "波動與光學",
+      "question": "在雙狹縫干涉實驗中,若增加兩狹縫間的距離,則干涉條紋的間距會如何變化?",
+      "options": [
+        "變大",
+        "變小",
+        "不變",
+        "先變大後變小",
+        "無法判斷"
+      ],
+      "correctAnswer": 1,
+      "explanation": "條紋間距與狹縫間距成反比,狹縫距離增加,條紋間距減小。",
+      "keyPoints": [
+        "雙狹縫干涉公式"
+      ],
+      "commonErrors": [
+        "比例關係錯誤"
+      ]
+    },
+    {
+      "id": 14,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "波動與光學",
+      "question": "凸透鏡的焦距為20 cm,物體放在距透鏡30 cm處,則像距為多少cm?",
+      "options": [
+        "40",
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "correctAnswer": 2,
+      "explanation": "由透鏡公式1/f = 1/u + 1/v,1/20 = 1/30 + 1/v,解得v = 60 cm。",
+      "keyPoints": [
+        "透鏡公式"
+      ],
+      "commonErrors": [
+        "公式推導錯誤"
+      ]
+    },
+    {
+      "id": 15,
+      "subject": "physics",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "波動與光學",
+      "question": "下列何種現象可以證明光具有波動性?",
+      "options": [
+        "光電效應",
+        "康普頓效應",
+        "干涉現象",
+        "黑體輻射",
+        "以上皆是"
+      ],
+      "correctAnswer": 2,
+      "explanation": "干涉現象是波動特有的性質,可證明光的波動性。光電效應和康普頓效應則證明粒子性。",
+      "keyPoints": [
+        "波粒二象性"
+      ],
+      "commonErrors": [
+        "混淆波動與粒子性質"
+      ]
+    },
+    {
+      "id": 16,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "原子結構",
+      "question": "某元素的原子序為17,其最外層電子數為何?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "原子序17為氯(Cl),電子組態為2,8,7,最外層有7個電子。",
+      "keyPoints": [
+        "電子組態",
+        "週期表"
+      ],
+      "commonErrors": [
+        "電子排列錯誤"
+      ]
+    },
+    {
+      "id": 17,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "原子結構",
+      "question": "下列何者的離子半徑最大?",
+      "options": [
+        "Na⁺",
+        "Mg²⁺",
+        "F⁻",
+        "O²⁻",
+        "Al³⁺"
+      ],
+      "correctAnswer": 3,
+      "explanation": "O²⁻得到2個電子,電子數最多且核電荷相對較小,離子半徑最大。",
+      "keyPoints": [
+        "離子半徑趨勢"
+      ],
+      "commonErrors": [
+        "忽略電荷影響"
+      ]
+    },
+    {
+      "id": 18,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "原子結構",
+      "question": "同一週期元素由左至右,下列何者遞增?",
+      "options": [
+        "原子半徑",
+        "金屬性",
+        "游離能",
+        "還原性",
+        "鹼性"
+      ],
+      "correctAnswer": 2,
+      "explanation": "同週期由左至右,游離能遞增,原子半徑遞減。",
+      "keyPoints": [
+        "週期性質趨勢"
+      ],
+      "commonErrors": [
+        "趨勢方向錯誤"
+      ]
+    },
+    {
+      "id": 19,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學鍵結",
+      "question": "下列何者屬於離子化合物?",
+      "options": [
+        "CO₂",
+        "H₂O",
+        "NaCl",
+        "CH₄",
+        "NH₃"
+      ],
+      "correctAnswer": 2,
+      "explanation": "NaCl由金屬Na與非金屬Cl形成,屬於離子化合物。",
+      "keyPoints": [
+        "化學鍵類型"
+      ],
+      "commonErrors": [
+        "鍵結判斷錯誤"
+      ]
+    },
+    {
+      "id": 20,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學鍵結",
+      "question": "水分子(H₂O)的形狀為何?",
+      "options": [
+        "直線形",
+        "平面三角形",
+        "四面體",
+        "V形",
+        "正方形"
+      ],
+      "correctAnswer": 3,
+      "explanation": "水分子有2對鍵結電子對和2對孤對電子,呈V形。",
+      "keyPoints": [
+        "VSEPR理論",
+        "分子形狀"
+      ],
+      "commonErrors": [
+        "忽略孤對電子"
+      ]
+    },
+    {
+      "id": 21,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學鍵結",
+      "question": "下列何者的極性最強?",
+      "options": [
+        "CO₂",
+        "CH₄",
+        "H₂O",
+        "BF₃",
+        "CCl₄"
+      ],
+      "correctAnswer": 2,
+      "explanation": "H₂O為V形極性分子,電負度差異大,極性最強。",
+      "keyPoints": [
+        "分子極性",
+        "電負度"
+      ],
+      "commonErrors": [
+        "形狀判斷錯誤"
+      ]
+    },
+    {
+      "id": 22,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學反應",
+      "question": "在反應2H₂ + O₂ → 2H₂O中,若有4莫耳H₂完全反應,需要多少莫耳O₂?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": 1,
+      "explanation": "由係數比2:1,4莫耳H₂需要2莫耳O₂。",
+      "keyPoints": [
+        "化學計量"
+      ],
+      "commonErrors": [
+        "係數比錯誤"
+      ]
+    },
+    {
+      "id": 23,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學反應",
+      "question": "下列何者為氧化還原反應?",
+      "options": [
+        "NaCl + AgNO₃ → AgCl + NaNO₃",
+        "HCl + NaOH → NaCl + H₂O",
+        "Zn + 2HCl → ZnCl₂ + H₂",
+        "BaCl₂ + H₂SO₄ → BaSO₄ + 2HCl",
+        "NH₃ + HCl → NH₄Cl"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Zn被氧化為Zn²⁺,H⁺被還原為H₂,屬於氧化還原反應。",
+      "keyPoints": [
+        "氧化還原判斷"
+      ],
+      "commonErrors": [
+        "氧化數變化判斷錯誤"
+      ]
+    },
+    {
+      "id": 24,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "化學反應",
+      "question": "增加反應物濃度會使反應速率增加,主要原因為何?",
+      "options": [
+        "降低活化能",
+        "增加碰撞頻率",
+        "改變反應機構",
+        "增加溫度",
+        "改變平衡常數"
+      ],
+      "correctAnswer": 1,
+      "explanation": "濃度增加使分子數增多,碰撞頻率增加,反應速率加快。",
+      "keyPoints": [
+        "反應速率理論"
+      ],
+      "commonErrors": [
+        "混淆影響因素"
+      ]
+    },
+    {
+      "id": 25,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "酸鹼鹽",
+      "question": "pH值為3的溶液,其氫離子濃度為多少M?",
+      "options": [
+        "10⁻¹",
+        "10⁻²",
+        "10⁻³",
+        "10⁻⁴",
+        "10⁻⁵"
+      ],
+      "correctAnswer": 2,
+      "explanation": "pH = -log[H⁺],pH=3表示[H⁺] = 10⁻³ M。",
+      "keyPoints": [
+        "pH定義"
+      ],
+      "commonErrors": [
+        "對數運算錯誤"
+      ]
+    },
+    {
+      "id": 26,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "酸鹼鹽",
+      "question": "下列何者為弱酸?",
+      "options": [
+        "HCl",
+        "HNO₃",
+        "H₂SO₄",
+        "CH₃COOH",
+        "HClO₄"
+      ],
+      "correctAnswer": 3,
+      "explanation": "CH₃COOH(醋酸)為弱酸,其他皆為強酸。",
+      "keyPoints": [
+        "酸的強弱"
+      ],
+      "commonErrors": [
+        "強弱酸記憶錯誤"
+      ]
+    },
+    {
+      "id": 27,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "酸鹼鹽",
+      "question": "中和反應的本質為何?",
+      "options": [
+        "H⁺ + OH⁻ → H₂O",
+        "酸 + 鹼 → 鹽 + 水",
+        "氧化還原",
+        "沉澱反應",
+        "錯合反應"
+      ],
+      "correctAnswer": 0,
+      "explanation": "中和反應的本質是H⁺與OH⁻結合生成水。",
+      "keyPoints": [
+        "中和反應本質"
+      ],
+      "commonErrors": [
+        "表面現象與本質混淆"
+      ]
+    },
+    {
+      "id": 28,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "有機化學",
+      "question": "甲烷(CH₄)的碳原子雜化軌域為何?",
+      "options": [
+        "sp",
+        "sp²",
+        "sp³",
+        "sp³d",
+        "sp³d²"
+      ],
+      "correctAnswer": 2,
+      "explanation": "甲烷為四面體結構,碳原子採sp³雜化。",
+      "keyPoints": [
+        "雜化軌域理論"
+      ],
+      "commonErrors": [
+        "結構與雜化對應錯誤"
+      ]
+    },
+    {
+      "id": 29,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "有機化學",
+      "question": "下列何者屬於飽和烴?",
+      "options": [
+        "乙烯",
+        "乙炔",
+        "苯",
+        "乙烷",
+        "甲苯"
+      ],
+      "correctAnswer": 3,
+      "explanation": "乙烷(C₂H₆)只含單鍵,屬於飽和烴。",
+      "keyPoints": [
+        "有機物分類"
+      ],
+      "commonErrors": [
+        "飽和與不飽和判斷錯誤"
+      ]
+    },
+    {
+      "id": 30,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "有機化學",
+      "question": "乙醇(C₂H₅OH)的官能基為何?",
+      "options": [
+        "羧基",
+        "羰基",
+        "羥基",
+        "胺基",
+        "醚基"
+      ],
+      "correctAnswer": 2,
+      "explanation": "乙醇含有-OH基團,稱為羥基,屬於醇類。",
+      "keyPoints": [
+        "官能基識別"
+      ],
+      "commonErrors": [
+        "官能基名稱混淆"
+      ]
+    },
+    {
+      "id": 31,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "有機化學",
+      "question": "下列何者可使溴水褪色?",
+      "options": [
+        "甲烷",
+        "乙烷",
+        "乙烯",
+        "甲醇",
+        "乙醇"
+      ],
+      "correctAnswer": 2,
+      "explanation": "乙烯含C=C雙鍵,可與溴發生加成反應使溴水褪色。",
+      "keyPoints": [
+        "加成反應",
+        "不飽和烴性質"
+      ],
+      "commonErrors": [
+        "反應類型錯誤"
+      ]
+    },
+    {
+      "id": 32,
+      "subject": "chemistry",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "有機化學",
+      "question": "聚乙烯(PE)是由何種單體聚合而成?",
+      "options": [
+        "乙烷",
+        "乙烯",
+        "乙炔",
+        "乙醇",
+        "乙酸"
+      ],
+      "correctAnswer": 1,
+      "explanation": "聚乙烯由乙烯(C₂H₄)經加成聚合反應而成。",
+      "keyPoints": [
+        "聚合反應",
+        "高分子化學"
+      ],
+      "commonErrors": [
+        "單體選擇錯誤"
+      ]
+    },
+    {
+      "id": 33,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "細胞構造",
+      "question": "下列何者為原核細胞的特徵?",
+      "options": [
+        "有核膜",
+        "有粒線體",
+        "有葉綠體",
+        "無核膜",
+        "有內質網"
+      ],
+      "correctAnswer": 3,
+      "explanation": "原核細胞最主要特徵是沒有核膜包圍的細胞核。",
+      "keyPoints": [
+        "原核與真核細胞差異"
+      ],
+      "commonErrors": [
+        "細胞構造混淆"
+      ]
+    },
+    {
+      "id": 34,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "細胞構造",
+      "question": "粒線體的主要功能為何?",
+      "options": [
+        "光合作用",
+        "蛋白質合成",
+        "細胞呼吸",
+        "脂質合成",
+        "物質運輸"
+      ],
+      "correctAnswer": 2,
+      "explanation": "粒線體是細胞進行有氧呼吸、產生ATP的場所。",
+      "keyPoints": [
+        "胞器功能"
+      ],
+      "commonErrors": [
+        "功能與構造對應錯誤"
+      ]
+    },
+    {
+      "id": 35,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "細胞構造",
+      "question": "植物細胞特有而動物細胞沒有的構造為何?",
+      "options": [
+        "細胞膜",
+        "細胞核",
+        "細胞壁",
+        "粒線體",
+        "核糖體"
+      ],
+      "correctAnswer": 2,
+      "explanation": "細胞壁是植物細胞特有的構造,提供支持與保護。",
+      "keyPoints": [
+        "動植物細胞差異"
+      ],
+      "commonErrors": [
+        "細胞構造分類錯誤"
+      ]
+    },
+    {
+      "id": 36,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "遺傳學",
+      "question": "DNA的雙股螺旋結構中,腺嘌呤(A)與何者配對?",
+      "options": [
+        "腺嘌呤(A)",
+        "胸腺嘧啶(T)",
+        "胞嘧啶(C)",
+        "鳥糞嘌呤(G)",
+        "尿嘧啶(U)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DNA中A與T配對,G與C配對,遵循鹼基互補配對原則。",
+      "keyPoints": [
+        "DNA結構",
+        "鹼基配對"
+      ],
+      "commonErrors": [
+        "配對規則錯誤"
+      ]
+    },
+    {
+      "id": 37,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "遺傳學",
+      "question": "孟德爾遺傳定律中,分離律發生在何時?",
+      "options": [
+        "有絲分裂",
+        "減數分裂I",
+        "減數分裂II",
+        "受精作用",
+        "DNA複製"
+      ],
+      "correctAnswer": 1,
+      "explanation": "分離律指對偶基因在減數分裂I時分離到不同配子中。",
+      "keyPoints": [
+        "孟德爾定律",
+        "減數分裂"
+      ],
+      "commonErrors": [
+        "分裂時期混淆"
+      ]
+    },
+    {
+      "id": 38,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "遺傳學",
+      "question": "人類的性別決定方式為何?",
+      "options": [
+        "XY型",
+        "ZW型",
+        "XO型",
+        "環境決定",
+        "單倍二倍型"
+      ],
+      "correctAnswer": 0,
+      "explanation": "人類採XY型性別決定,男性為XY,女性為XX。",
+      "keyPoints": [
+        "性別決定機制"
+      ],
+      "commonErrors": [
+        "性別決定類型錯誤"
+      ]
+    },
+    {
+      "id": 39,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "遺傳學",
+      "question": "下列何者不是突變的原因?",
+      "options": [
+        "紫外線",
+        "游離輻射",
+        "化學藥劑",
+        "DNA複製錯誤",
+        "正常的DNA修復"
+      ],
+      "correctAnswer": 4,
+      "explanation": "正常的DNA修復是修正錯誤,不會造成突變。",
+      "keyPoints": [
+        "突變成因"
+      ],
+      "commonErrors": [
+        "修復與突變混淆"
+      ]
+    },
+    {
+      "id": 40,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "演化",
+      "question": "達爾文天擇說的核心概念為何?",
+      "options": [
+        "用進廢退",
+        "適者生存",
+        "獲得性遺傳",
+        "定向突變",
+        "物種不變"
+      ],
+      "correctAnswer": 1,
+      "explanation": "天擇說強調適應環境者較易生存繁殖,即適者生存。",
+      "keyPoints": [
+        "演化理論"
+      ],
+      "commonErrors": [
+        "演化機制混淆"
+      ]
+    },
+    {
+      "id": 41,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "演化",
+      "question": "下列何者可作為生物演化的證據?",
+      "options": [
+        "化石記錄",
+        "比較解剖",
+        "胚胎發育",
+        "分子生物學",
+        "以上皆是"
+      ],
+      "correctAnswer": 4,
+      "explanation": "化石、解剖、胚胎、分子等多方面證據都支持演化論。",
+      "keyPoints": [
+        "演化證據"
+      ],
+      "commonErrors": [
+        "證據類型不完整"
+      ]
+    },
+    {
+      "id": 42,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "演化",
+      "question": "同源構造指的是什麼?",
+      "options": [
+        "功能相同的構造",
+        "來源相同的構造",
+        "外觀相同的構造",
+        "大小相同的構造",
+        "位置相同的構造"
+      ],
+      "correctAnswer": 1,
+      "explanation": "同源構造指來源(胚胎發育起源)相同但功能可能不同的構造。",
+      "keyPoints": [
+        "比較解剖學"
+      ],
+      "commonErrors": [
+        "同源與同功混淆"
+      ]
+    },
+    {
+      "id": 43,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生態學",
+      "question": "生態系中能量流動的特點為何?",
+      "options": [
+        "循環流動",
+        "單向流動",
+        "雙向流動",
+        "隨機流動",
+        "不流動"
+      ],
+      "correctAnswer": 1,
+      "explanation": "能量在生態系中呈單向流動,從生產者到消費者,最終散失為熱能。",
+      "keyPoints": [
+        "能量流動"
+      ],
+      "commonErrors": [
+        "能量與物質循環混淆"
+      ]
+    },
+    {
+      "id": 44,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生態學",
+      "question": "下列何者屬於初級消費者?",
+      "options": [
+        "草",
+        "草食性動物",
+        "肉食性動物",
+        "腐生菌",
+        "分解者"
+      ],
+      "correctAnswer": 1,
+      "explanation": "初級消費者是直接以生產者為食的草食性動物。",
+      "keyPoints": [
+        "營養階層"
+      ],
+      "commonErrors": [
+        "消費者層級錯誤"
+      ]
+    },
+    {
+      "id": 45,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生態學",
+      "question": "生態系中物質循環的特點為何?",
+      "options": [
+        "單向流動",
+        "循環流動",
+        "不流動",
+        "只進不出",
+        "只出不進"
+      ],
+      "correctAnswer": 1,
+      "explanation": "物質(如碳、氮)在生態系中可循環使用,與能量單向流動不同。",
+      "keyPoints": [
+        "物質循環"
+      ],
+      "commonErrors": [
+        "循環與流動混淆"
+      ]
+    },
+    {
+      "id": 46,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生態學",
+      "question": "溫室效應主要是由於大氣中何種氣體增加?",
+      "options": [
+        "氧氣",
+        "氮氣",
+        "二氧化碳",
+        "氦氣",
+        "氬氣"
+      ],
+      "correctAnswer": 2,
+      "explanation": "二氧化碳等溫室氣體增加會加劇溫室效應。",
+      "keyPoints": [
+        "環境議題"
+      ],
+      "commonErrors": [
+        "溫室氣體種類錯誤"
+      ]
+    },
+    {
+      "id": 47,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生理學",
+      "question": "人體血糖濃度的調節主要由何種激素控制?",
+      "options": [
+        "生長激素",
+        "甲狀腺素",
+        "胰島素",
+        "腎上腺素",
+        "性激素"
+      ],
+      "correctAnswer": 2,
+      "explanation": "胰島素可降低血糖,升糖素可升高血糖,共同調節血糖平衡。",
+      "keyPoints": [
+        "內分泌系統",
+        "血糖調節"
+      ],
+      "commonErrors": [
+        "激素功能混淆"
+      ]
+    },
+    {
+      "id": 48,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生理學",
+      "question": "神經傳導的方向為何?",
+      "options": [
+        "樹突→細胞本體→軸突",
+        "軸突→細胞本體→樹突",
+        "細胞本體→樹突→軸突",
+        "雙向傳導",
+        "隨機傳導"
+      ],
+      "correctAnswer": 0,
+      "explanation": "神經衝動由樹突接收,經細胞本體,由軸突傳出。",
+      "keyPoints": [
+        "神經系統",
+        "神經元構造"
+      ],
+      "commonErrors": [
+        "傳導方向錯誤"
+      ]
+    },
+    {
+      "id": 49,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生理學",
+      "question": "人體的氣體交換主要發生在何處?",
+      "options": [
+        "氣管",
+        "支氣管",
+        "肺泡",
+        "鼻腔",
+        "喉部"
+      ],
+      "correctAnswer": 2,
+      "explanation": "肺泡壁薄且微血管豐富,是氣體交換的主要場所。",
+      "keyPoints": [
+        "呼吸系統"
+      ],
+      "commonErrors": [
+        "器官功能錯誤"
+      ]
+    },
+    {
+      "id": 50,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生理學",
+      "question": "下列何者屬於人體的非專一性防禦?",
+      "options": [
+        "抗體",
+        "T細胞",
+        "B細胞",
+        "皮膚屏障",
+        "記憶細胞"
+      ],
+      "correctAnswer": 3,
+      "explanation": "皮膚屏障、黏膜等屬於非專一性防禦,對所有病原體都有效。",
+      "keyPoints": [
+        "免疫系統"
+      ],
+      "commonErrors": [
+        "專一與非專一性混淆"
+      ]
+    },
+    {
+      "id": 51,
+      "subject": "biology",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "生理學",
+      "question": "光合作用產生氧氣的原料為何?",
+      "options": [
+        "二氧化碳",
+        "水",
+        "葡萄糖",
+        "澱粉",
+        "氮氣"
+      ],
+      "correctAnswer": 1,
+      "explanation": "光合作用中,水分子被分解產生氧氣和氫離子。",
+      "keyPoints": [
+        "光合作用"
+      ],
+      "commonErrors": [
+        "反應物與產物混淆"
+      ]
+    },
+    {
+      "id": 52,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "地球的結構",
+      "question": "地球內部由外而內的分層順序為何?",
+      "options": [
+        "地殼→地函→外核→內核",
+        "地殼→外核→地函→內核",
+        "地函→地殼→外核→內核",
+        "地殼→內核→外核→地函",
+        "外核→地函→地殼→內核"
+      ],
+      "correctAnswer": 0,
+      "explanation": "地球由外而內依序為:地殼、地函、外核、內核。",
+      "keyPoints": [
+        "地球內部構造"
+      ],
+      "commonErrors": [
+        "分層順序錯誤"
+      ]
+    },
+    {
+      "id": 53,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "地球的結構",
+      "question": "地球的磁場主要由何處產生?",
+      "options": [
+        "地殼",
+        "地函",
+        "外核",
+        "內核",
+        "大氣層"
+      ],
+      "correctAnswer": 2,
+      "explanation": "地球磁場由液態鐵鎳組成的外核流動產生。",
+      "keyPoints": [
+        "地磁成因"
+      ],
+      "commonErrors": [
+        "磁場來源錯誤"
+      ]
+    },
+    {
+      "id": 54,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "地球的結構",
+      "question": "板塊構造學說中,新的海洋地殼在何處生成?",
+      "options": [
+        "隱沒帶",
+        "中洋脊",
+        "轉形斷層",
+        "大陸邊緣",
+        "海溝"
+      ],
+      "correctAnswer": 1,
+      "explanation": "中洋脊是海底擴張的中心,新的海洋地殼在此生成。",
+      "keyPoints": [
+        "板塊構造",
+        "海底擴張"
+      ],
+      "commonErrors": [
+        "板塊邊界類型混淆"
+      ]
+    },
+    {
+      "id": 55,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "岩石與礦物",
+      "question": "下列何者屬於火成岩?",
+      "options": [
+        "砂岩",
+        "頁岩",
+        "花崗岩",
+        "大理岩",
+        "石灰岩"
+      ],
+      "correctAnswer": 2,
+      "explanation": "花崗岩由岩漿冷卻凝固形成,屬於火成岩。",
+      "keyPoints": [
+        "岩石分類"
+      ],
+      "commonErrors": [
+        "岩石類型判斷錯誤"
+      ]
+    },
+    {
+      "id": 56,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "岩石與礦物",
+      "question": "變質岩是由何種作用形成?",
+      "options": [
+        "風化作用",
+        "侵蝕作用",
+        "沉積作用",
+        "高溫高壓作用",
+        "冷卻凝固"
+      ],
+      "correctAnswer": 3,
+      "explanation": "變質岩是原有岩石經高溫高壓作用而改變形成。",
+      "keyPoints": [
+        "岩石循環"
+      ],
+      "commonErrors": [
+        "成岩作用混淆"
+      ]
+    },
+    {
+      "id": 57,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "岩石與礦物",
+      "question": "莫氏硬度最高的礦物為何?",
+      "options": [
+        "石英",
+        "長石",
+        "金剛石",
+        "剛玉",
+        "方解石"
+      ],
+      "correctAnswer": 2,
+      "explanation": "金剛石(鑽石)的莫氏硬度為10,是最硬的礦物。",
+      "keyPoints": [
+        "礦物性質"
+      ],
+      "commonErrors": [
+        "硬度順序錯誤"
+      ]
+    },
+    {
+      "id": 58,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "大氣與天氣",
+      "question": "對流層的特性為何?",
+      "options": [
+        "高度越高溫度越高",
+        "高度越高溫度越低",
+        "溫度不隨高度變化",
+        "只有臭氧層",
+        "沒有水氣"
+      ],
+      "correctAnswer": 1,
+      "explanation": "對流層中高度每上升100公尺,溫度約下降0.6°C。",
+      "keyPoints": [
+        "大氣分層"
+      ],
+      "commonErrors": [
+        "溫度梯度方向錯誤"
+      ]
+    },
+    {
+      "id": 59,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "大氣與天氣",
+      "question": "颱風的能量主要來源為何?",
+      "options": [
+        "太陽輻射",
+        "地熱",
+        "海水蒸發潛熱",
+        "風的動能",
+        "氣壓差"
+      ],
+      "correctAnswer": 2,
+      "explanation": "颱風的能量主要來自熱帶海洋水氣蒸發時釋放的潛熱。",
+      "keyPoints": [
+        "颱風形成"
+      ],
+      "commonErrors": [
+        "能量來源錯誤"
+      ]
+    },
+    {
+      "id": 60,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "大氣與天氣",
+      "question": "鋒面是指什麼?",
+      "options": [
+        "高壓中心",
+        "低壓中心",
+        "冷暖氣團交界面",
+        "等壓線",
+        "等溫線"
+      ],
+      "correctAnswer": 2,
+      "explanation": "鋒面是冷暖氣團的交界面,常伴隨天氣變化。",
+      "keyPoints": [
+        "天氣系統"
+      ],
+      "commonErrors": [
+        "氣象名詞混淆"
+      ]
+    },
+    {
+      "id": 61,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "大氣與天氣",
+      "question": "臺灣夏季盛行何種風向?",
+      "options": [
+        "東北季風",
+        "西南季風",
+        "東南季風",
+        "西北季風",
+        "無固定風向"
+      ],
+      "correctAnswer": 1,
+      "explanation": "臺灣夏季受西南季風影響,帶來豐沛雨量。",
+      "keyPoints": [
+        "季風氣候"
+      ],
+      "commonErrors": [
+        "季風方向錯誤"
+      ]
+    },
+    {
+      "id": 62,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "海洋",
+      "question": "海水鹽度的定義為何?",
+      "options": [
+        "每公升海水中溶解的鹽類克數",
+        "每公斤海水中溶解的鹽類克數",
+        "海水中氯離子濃度",
+        "海水的密度",
+        "海水的pH值"
+      ],
+      "correctAnswer": 1,
+      "explanation": "鹽度定義為每1000克(1公斤)海水中溶解的鹽類總克數。",
+      "keyPoints": [
+        "海洋化學"
+      ],
+      "commonErrors": [
+        "單位定義錯誤"
+      ]
+    },
+    {
+      "id": 63,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "海洋",
+      "question": "洋流的形成主要受何者影響?",
+      "options": [
+        "月球引力",
+        "地球自轉",
+        "盛行風",
+        "海底地形",
+        "以上皆是"
+      ],
+      "correctAnswer": 4,
+      "explanation": "洋流形成受多種因素影響,包括風、地轉偏向力、地形等。",
+      "keyPoints": [
+        "海洋環流"
+      ],
+      "commonErrors": [
+        "影響因素不完整"
+      ]
+    },
+    {
+      "id": 64,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "海洋",
+      "question": "潮汐現象主要由何者引起?",
+      "options": [
+        "太陽引力",
+        "月球引力",
+        "地球自轉",
+        "風力",
+        "海底地震"
+      ],
+      "correctAnswer": 1,
+      "explanation": "潮汐主要由月球引力引起,太陽引力也有影響但較小。",
+      "keyPoints": [
+        "潮汐成因"
+      ],
+      "commonErrors": [
+        "引力來源錯誤"
+      ]
+    },
+    {
+      "id": 65,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "天文",
+      "question": "太陽系八大行星中,體積最大的是?",
+      "options": [
+        "土星",
+        "木星",
+        "天王星",
+        "海王星",
+        "地球"
+      ],
+      "correctAnswer": 1,
+      "explanation": "木星是太陽系中體積和質量最大的行星。",
+      "keyPoints": [
+        "太陽系"
+      ],
+      "commonErrors": [
+        "行星特性混淆"
+      ]
+    },
+    {
+      "id": 66,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "天文",
+      "question": "月相變化的週期約為多少天?",
+      "options": [
+        "7天",
+        "15天",
+        "29.5天",
+        "365天",
+        "27.3天"
+      ],
+      "correctAnswer": 2,
+      "explanation": "月相變化(朔望月)週期約29.5天。",
+      "keyPoints": [
+        "月球運動"
+      ],
+      "commonErrors": [
+        "週期數值錯誤"
+      ]
+    },
+    {
+      "id": 67,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "天文",
+      "question": "恆星的顏色主要反映什麼?",
+      "options": [
+        "距離",
+        "大小",
+        "表面溫度",
+        "年齡",
+        "質量"
+      ],
+      "correctAnswer": 2,
+      "explanation": "恆星顏色主要反映其表面溫度,藍色最熱,紅色較冷。",
+      "keyPoints": [
+        "恆星性質"
+      ],
+      "commonErrors": [
+        "顏色與溫度關係錯誤"
+      ]
+    },
+    {
+      "id": 68,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "天文",
+      "question": "銀河系的形狀為何?",
+      "options": [
+        "球形",
+        "橢圓形",
+        "螺旋形",
+        "不規則形",
+        "環形"
+      ],
+      "correctAnswer": 2,
+      "explanation": "銀河系是棒旋星系,呈螺旋盤狀結構。",
+      "keyPoints": [
+        "星系分類"
+      ],
+      "commonErrors": [
+        "星系形狀錯誤"
+      ]
+    },
+    {
+      "id": 69,
+      "subject": "earth",
+      "type": "single-choice",
+      "difficulty": "medium",
+      "cognitiveLevel": "application",
+      "topic": "天文",
+      "question": "日食發生時,三者的排列順序為何?",
+      "options": [
+        "太陽-地球-月球",
+        "太陽-月球-地球",
+        "地球-太陽-月球",
+        "月球-地球-太陽",
+        "地球-月球-太陽"
+      ],
+      "correctAnswer": 1,
+      "explanation": "日食時月球位於太陽與地球之間,遮擋陽光。",
+      "keyPoints": [
+        "日月食"
+      ],
+      "commonErrors": [
+        "天體位置錯誤"
+      ]
+    }
+  ]
+}
